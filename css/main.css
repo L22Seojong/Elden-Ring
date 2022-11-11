@@ -13,11 +13,16 @@ body {
   font-family: sans-serif;
   background-color: black;
   color: white;
+
+}
+
+h5 {
+    text-align: center;
 }
 
 /*style the header */
 header{
-    background-color: rgb(55, 42, 12);
+    background-color: rgb(104, 93, 72);
     position: sticky;
     top: 0;
     text-align: center;
@@ -28,7 +33,7 @@ header{
 /* main section styles */
 #character-nav {
      text-align: center;
-     background-color: #ebe199;
+     background-color: #fdf7c0;
 
      /*add a background image to the nav elements */
      background-image: url("../image/eldenringsm.webp");
@@ -44,39 +49,56 @@ header{
 
 .characters li { 
     display: inline-block;
-    height: 260px;
+    height: 320px;
     margin: 10px 8px;
 
     background-color: rgb(0, 0, 0);
+
     text-align: left;
+
     overflow: hidden;
+
+    cursor: pointer;
 }
 
+.characters li:hover .red-bumper { height: 200px;}
+
 .characters li h5 {
+    position: relative;
     padding: 14px 8px;
     color: white;
+
+    z-index: 50;
 }
 
 .characters li a{text-decoration: none;}
 
-.characters li img { width: 150px; cursor: pointer;}
+.characters li img { width: 190px; cursor: pointer;}
 
 .sprite {
     width: 150px;
-    height: 150px;
+    height: -50px;
+    padding: -15px;
+}
 
-    background-image: url("../image/golden tree.jpeg");
+.h5 {
+    text-align: center;
 }
 
 .sprite:hover { background-position-y: -150px !important;}
 
 #warrior {background-position: -150px 0;}
-#Astrologer {background-position: -300px 0;}
-#Bandit {background-position: -450px 0;}
-#Confessor {background-position: -600px 0;}
-#Prophet {background-position: -750px 0;}
+#astrologer {background-position: -300px 0;}
+#bandit {background-position: -450px 0;}
+#confessor {background-position: -600px 0;}
+#prophet {background-position: -750px 0;}
 
-.red-bumper {height: 45px; background-color: rgb(255, 0, 0);}
+.red-bumper {
+    height: 6px; 
+    background-color: rgb(230, 204, 89);
+
+    transition: all 0.5s ease ;
+}
 
 article {padding: 20px;}
 
@@ -109,10 +131,6 @@ footer{
     background-color: rgb(48, 37, 37);
 }
 
-h3{
-    font-family: 'Times New Roman', Times, serif;
-}
-
 /*lightbox styles */
 .lightbox {
     display: none;
@@ -128,6 +146,8 @@ h3{
 
     background-position: 40px bottom;
     background-size: 55vh;
+
+    z-index: 50;
 }
 
 .lb_close {
@@ -151,13 +171,14 @@ h3{
 
 .lb_text, .lb_heading { 
     text-align: left;
-    font-size: 23px;
+    font-size: 40px;
 }
 
 .lb_text {
     line-height: 1.6;
     margin-left: 0;
     padding-top: 2em;
+    font-size: 20px;
 }
 
 #lightBox {
